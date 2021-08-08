@@ -24,37 +24,37 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  LOWER   |
 // | CTL | GUI | ALT |  | LT(RAISE,SPC) |        | SPC |       | ALT | GUI  | CTL |
                         bindings = <
-   &kp ESC  &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I  &kp O  &kp P   &kp BSPC
-   &kp TAB &kp A  &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L     &kp ENTER
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &mo LOWER
-   &kp LCTL &kp LGUI &mo RAISE &kp SPACE   &kp SPACE &kp RGUI &kp RALT &kp RCTL
+   &kp TAB  &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I  &kp O  &kp P   &kp BSPC
+   &mt LCTL ESC &kp A  &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L     &kp SEMI
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp ENTER
+   &mo RAISE &kp LALT &kp LGUI &lt LOWER SPACE   &lt RAISE SPACE &kp RGUI &kp RALT &kp RCTL
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | TILD  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |      |
-// | BTCLR| BT0 | BT1 | BT2 | OUT |  _   |     | {  |  }  |  "  |  :  |             |           
-// |      | RST |     |     |     |  +   |     | "|" | ?  |     |        |          |      
-// |     |     |    |                    |     |                |     |      |      |
+// | TILD  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  | DEL |
+// | BTCLR| BT0 | BT1 | BT2 | OUT |      |     | F6  |  _  |  +  |  {  |  }        |     
+// |      | RST |     |     |     |      |     | F12 |  "  |     | PGUP|    ?      |  
+// |      |     |     |     |     |      |     |     |     |     |     |     |     |
                         bindings = <
-   &kp TILD &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET  &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_TOG &kp UNDER     &kp LBRC &kp RBRC &kp DQT &kp COLON &trans 
-   &trans  &reset      &none       &none       &none       &kp PLUS   &kp PIPE   &kp QMARK   &trans    &trans    &trans 
-   &trans &trans  &trans       &trans                        &trans          &trans                       &trans &trans
+   &kp TILD &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET  &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp DEL
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_TOG &none     &kp F6 &kp UNDER &kp PLUS &kp LBRC &RBRC 
+   &trans  &reset      &none       &none       &none       &none   &kp F12   &kp DQT   &trans    &PG_UP    &QMARK 
+   &trans &trans  &trans       &trans                        &trans          &HOME                       &PG_DOWN &END
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | GRV |  1  |  2  |  3  |  4 |  5    |     |  6  |  7  |  8  |  9  |  0  |      |
-// |     | LFT | DWN | UP   | RGT |  -  |     |  [  |  ]  |  '  |  ;  |     |
-// |     |     |     |     |     |   =  |     |  \  |  /  |     |     |     | 
-// |     |     |     |                  |     |           |     |     |     |
+// | GRV |  1  |  2  |  3  |  4 |  5    |     |  6  |  7  |  8  |  9  |  0  |  DEL    |
+// |     | F1  | F2  | F3  | F4  |  F5  |     |  F6  | -  |  =  |  [  |  ]   |
+// |     | F7  | F8  | F9  | F10 |  F11 |     |  F12 |  '  |     | up    |   /  | 
+// |     |     |     |                  |     |           |  left   |  down   | right    |
                         bindings = <
-   &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6 &kp N7  &kp N8 &kp N9 &kp N0 &trans
-   &trans &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp MINUS      &kp LBKT &kp RBKT &kp SQT &kp SEMI  &trans 
-   &trans &none    &none  &none    &none    &kp EQUAL      &kp BSLH    &kp FSLH    &trans  &trans &trans
-   &trans &trans &trans                     &trans          &trans              &trans &trans &trans
+   &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6 &kp N7  &kp N8 &kp N9 &kp N0 &kp DEL
+   &trans &kp F1  &kp F2  &kp F3    &kp F4  &kp F5      &kp F6 &kp MINUS &kp EQUAL &kp LBKT  &RBKT 
+   &trans &kp F7    &kp F8  &kp F9    &kp F10    &kp F11      &kp F12    &kp SQT    &none  &kp UP &trans
+   &trans &trans &trans                     &trans          &trans              &k LEFT &kp DOWN &kp RIGHT
                         >;
                 };
         };
